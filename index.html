@@ -3,9 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="assets/main.css">
     <title>Mortgage Calculator</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="mortgage-calculator">
+            <div class="left-section">
+                <h1>Mortgage Calculator</h1>
+                <form id="mortgage-form">
+                    <div class="form-group">
+                        <label for="amount">Mortgage Amount</label>
+                        <input type="number" name="amount" id="amount" placeholder="£" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="term">Mortgage Term</label>
+                        <input type="number" name="term" id="term" placeholder="years" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Interest Rate</label>
+                        <input type="number" name="interest" id="interest" placeholder="%" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mortgage-type">Mortgage Type</label>
+                        <div class="radio-group">
+                            <label for="repayment">
+                                <input type="radio" name="repayment" id="repayment" value="repayment" checked>Repayment
+                            </label>
+                            <label for="interest-only">
+                                <input type="radio" name="interest-only" id="interest-only" value="interest-only">Interest Only
+                            </label>
+                        </div>
+                    </div>
+                    <button type="button" id="calculate-button">Calculate Repayments</button>
+                </form>
+            </div>
+
+            <div class="right-section" id="right-section">
+                <div class="result-idle" id="result-idle">
+                    <p>Result shown here</p>
+                    <p>Complete the form and click "Calculate repayments" to see your monthly repayments.</p>
+                </div>
+                <div class="result-show" id="result-show" style="display: none">
+                    <p>Your monthly repayments: <span id="monthly-repayment">£0.00</span></p>
+                    <p>Total you'll repay over the term: <span id="totalRepayment">£0.00</span></p>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <script src="assets/script.js" defer></script>
 </body>
 </html>
