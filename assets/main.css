@@ -1,88 +1,161 @@
-:root{
-    --sky-blue:#b2bfc7;
-    --dark-blue:#0f2633;
-    --lime-yellow:#aeaf26;
+:root {
+    --sky-blue: #b2bfc7;
+    --dark-blue: #0f2633;  /* Dark blue color for result background */
+    --lime-yellow: #aeaf26; /* Accent color */
     --orange: #e69f00;
-    --blue-grey:#647b8a;
-    --white:#f5f7fa;
+    --blue-grey: #647b8a;
+    --white: #f5f7fa;
+    --background-size: cover;
+    --background-position: center;
+    --idle-background: url('/assets/images/illustration-empty.svg'); /* Ensure this is correct */
 }
-@font-face {
-    font-family: 'PlusJakartaSans';
-    src: url('/assets/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
-    font-weight: 400 800;
-}
-body{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'PlusJakartaSans', sans-serif;
     background-color: var(--sky-blue);
 }
-.container{
-    display:flex;
+
+.container {
+    display: flex;
     justify-content: center;
     align-items: center;
-    height:100vh;
+    height: 100vh;
+    padding: 20px;
 }
-.mortgage-calculator{
-    display:flex;
+
+.mortgage-calculator {
+    display: flex;
     background-color: var(--white);
-    padding:20px;
-    border-radius:10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    width:100%;
-    max-width:800px;
+    padding: 30px;
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+    width: 100%;
+    max-width: 1000px;
 }
-.left-section, .right-section{
-    width:50%;
+
+.left-section,
+.right-section {
+    width: 50%;
+    padding: 20px;
 }
-.left-section h1{
+
+.left-section h1 {
     text-align: center;
-    font-size:24px;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--dark-blue);
+    margin-bottom: 30px;
 }
-label{
-    display:block;
-    font-size:16px;
-    margin-bottom:5px;
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: var(--dark-blue);
+    font-weight: bold;
 }
-input[type="number"], button{
-    width:100%;
-    padding:10px;
-    font-size:16px;
-    border:1px solid #ddd;
-    border-radius:5px;
+
+input[type="number"],
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: var(--white);
+    margin-bottom: 15px;
 }
-button{
+
+input[type="number"]:focus,
+button:focus {
+    outline: none;
+    border: 1px solid var(--lime-yellow);
+}
+
+button {
     background-color: var(--lime-yellow);
-    border:none;
-    cursor:pointer;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
 }
-button:hover{
+
+button:hover {
     background-color: var(--orange);
 }
-.radio-group{
-    display:flex;
+
+.radio-group {
+    display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
-.radio-group label{
-    font-size:14px;
-}
-.result-idle{
-    text-align:center;
+
+.radio-group label {
+    font-size: 14px;
+    font-weight: bold;
     color: var(--blue-grey);
 }
-.result-idle p{
-    font-size:18px;
-    margin-bottom: 10px;
+
+.result-idle {
+    text-align: center;
+    color: var(--blue-grey);
+    background: var(--idle-background);
+    background-size: var(--background-size);
+    background-position: var(--background-position);
+    padding: 50px;
+    border-radius: 16px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
 }
-.result-show{
-    text-align:center;
-    color: #007bff;
+
+.result-idle p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
 }
-.result-show p{
-    font-size:18px;
-    font-weight:bold;
+
+/* Adjusting .result-show to match the reference image */
+.result-show {
+    text-align: center;
+    color: var(--white);  /* White text color */
+    background-color: var(--dark-blue);  /* Dark blue background */
+    padding: 30px 40px; /* Increased padding for more space */
+    border-radius: 16px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);  /* Stronger shadow */
+    width: 80%;  /* Adjusted width */
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative; /* To allow the accent bar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.result-show span{
-    color:#007bff;
+
+/* Adding the yellow accent bar at the top */
+.result-show:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--lime-yellow);
+    border-radius: 16px 16px 0 0;  /* Rounded top corners */
+}
+
+.result-show p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.result-show span {
+    color: var(--white);  /* White text color */
+    font-size: 24px;
+    font-weight: bold;
 }
