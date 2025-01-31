@@ -111,6 +111,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     margin:20px;
+    padding-top:80px;
 }
 .idle-caption-upper{
     color: var(--white);
@@ -120,4 +121,41 @@ button:hover {
 }
 .idle-caption-lower{
     text-align: center;
+}
+.result-show{
+    display:flex;
+    margin: 20px;
+}
+.result-label{
+    color: var(--white);
+    font-weight:600;
+    font-size:22px;
+}
+.result-caption{
+    text-align: justify;
+}
+.result-box{
+    background: black;
+    border-top:4px solid var(--lime-yellow);
+    border-radius:10px;
+    margin:50px auto 20px auto;
+}
+.payment-calculation, .payment-amount, .repayment-calculation, .repayment-amount{
+    margin: 0 25px;
+}
+.payment-calculation, .repayment-calculation{
+    padding: 15px 0;
+}
+.payment-amount{
+    padding-bottom:20px;
+    color: var(--lime-yellow);
+    font-weight:600;
+    font-size:45px;
+    border-bottom:2px solid var(--blue-grey);
+}
+.repayment-amount{
+    color: var(--white);
+    font-weight:600;
+    font-size:30px;
+    padding-bottom:20px;
 }
