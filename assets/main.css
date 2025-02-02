@@ -1,15 +1,13 @@
 :root {
     --sky-blue: #b2bfc7;
-    --dark-blue: #0f2633;  /* Dark blue color for result background */
-    --lime-yellow: #aeaf26; /* Accent color */
+    --dark-blue: #0f2633;  
+    --lime-yellow: #aeaf26; 
     --orange: #e69f00;
     --blue-grey: #647b8a;
     --white: #f5f7fa;
     --background-size: cover;
     --background-position: center;
-    --idle-background: url('/assets/images/illustration-empty.svg'); /* Ensure this is correct */
 }
-
 body {
     margin: 0;
     padding: 0;
@@ -17,7 +15,6 @@ body {
     font-family: 'PlusJakartaSans', sans-serif;
     background-color: var(--sky-blue);
 }
-
 .container {
     display: flex;
     justify-content: center;
@@ -25,7 +22,6 @@ body {
     height: 100vh;
     padding: 20px;
 }
-
 .mortgage-calculator {
     display: flex;
     background-color: var(--white);
@@ -36,13 +32,11 @@ body {
     max-height: 800px;
     height:70%;
 }
-
 .left-section,
 .right-section {
     width: 50%;
     padding: 20px;
 }
-
 .left-section h1 {
     text-align: center;
     font-size: 28px;
@@ -50,7 +44,6 @@ body {
     color: var(--dark-blue);
     margin-bottom: 30px;
 }
-
 label {
     display: block;
     font-size: 16px;
@@ -58,7 +51,6 @@ label {
     color: var(--dark-blue);
     font-weight: bold;
 }
-
 input[type="number"],
 button {
     width: 100%;
@@ -75,24 +67,20 @@ button:focus {
     outline: none;
     border: 1px solid var(--lime-yellow);
 }
-
 button {
     background-color: var(--lime-yellow);
     border: none;
     cursor: pointer;
     font-weight: bold;
 }
-
 button:hover {
     background-color: var(--orange);
 }
-
 .radio-group {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
 }
-
 .radio-group label {
     font-size: 14px;
     font-weight: bold;
