@@ -25,12 +25,21 @@ body {
 .mortgage-calculator {
     display: flex;
     background-color: var(--white);
-    border-radius: 16px; /* Rounded corners */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+    border-radius: 16px; 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
     width: 100%;
     max-width: 1000px;
     max-height: 800px;
     height:70%;
+}
+.heading-area{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+.clear-btn{
+
 }
 .left-section,
 .right-section {
@@ -52,7 +61,7 @@ label {
     font-weight: bold;
 }
 input[type="number"],
-button {
+.calculate-btn {
     width: 100%;
     padding: 12px;
     font-size: 16px;
@@ -63,17 +72,17 @@ button {
 }
 
 input[type="number"]:focus,
-button:focus {
+.calculate-btn:focus {
     outline: none;
     border: 1px solid var(--lime-yellow);
 }
-button {
+.calculate-btn {
     background-color: var(--lime-yellow);
     border: none;
     cursor: pointer;
     font-weight: bold;
 }
-button:hover {
+.calculate-btn:hover {
     background-color: var(--orange);
 }
 .radio-group {
