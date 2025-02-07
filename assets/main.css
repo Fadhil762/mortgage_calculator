@@ -1,3 +1,4 @@
+/* Root CSS */
 :root {
     --sky-blue: #b2bfc7;
     --dark-blue: #0f2633;  
@@ -5,8 +6,8 @@
     --orange: #e69f00;
     --blue-grey: #647b8a;
     --white: #f5f7fa;
-    --background-size: cover;
-    --background-position: center;
+    --black: #000000;
+    --light-blue: #0c62e4;
 }
 body {
     margin: 0;
@@ -15,6 +16,21 @@ body {
     font-family: 'PlusJakartaSans', sans-serif;
     background-color: var(--sky-blue);
 }
+/* Remove the spinner from number input fields */
+input[type="number"] {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Ensure no spinner appears in WebKit browsers */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* container and wrapper*/
 .container {
     display: flex;
     justify-content: center;
@@ -32,26 +48,44 @@ body {
     max-height: 800px;
     height:70%;
 }
-.heading-area{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: baseline;
-}
-.clear-btn{
-
-}
 .left-section,
 .right-section {
     width: 50%;
-    padding: 20px;
+    padding: 20px 30px;
+
 }
-.left-section h1 {
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
+
+
+/* left side styling*/
+.heading-area{
+    display:flex;
+    flex-direction: row;
+    align-items: baseline;
+    
+}
+.calculator-title {
+    font-size: 22px;
+    font-weight: 600;
     color: var(--dark-blue);
-    margin-bottom: 30px;
+    margin-right:120px;
+}
+.clear-btn{
+    border:none;
+    background: var(--white);
+    color: var(--light-blue);
+    cursor:pointer;
+    font-weight: 600;
+    font-size:16px;
+}
+.amount{
+    width:90%;
+    padding:10px;
+    border:1 px solid var(--white);
+    border-radius:5px;
+}
+.amount:focus{
+    border: 1px solid var(--light-blue);
+    outline:none;
 }
 label {
     display: block;
@@ -60,41 +94,27 @@ label {
     color: var(--dark-blue);
     font-weight: bold;
 }
-input[type="number"],
-.calculate-btn {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: var(--white);
-    margin-bottom: 15px;
+.form-group-amount, .form-group-term{
+    margin:25px auto;
+}
+.form-group-term{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.form-group-term input{
+    width:80%;
+    padding:10px;
+    border:1px solid var(--white);
+    border-radius:5px;
+}
+.form-group-type {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-input[type="number"]:focus,
-.calculate-btn:focus {
-    outline: none;
-    border: 1px solid var(--lime-yellow);
-}
-.calculate-btn {
-    background-color: var(--lime-yellow);
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-.calculate-btn:hover {
-    background-color: var(--orange);
-}
-.radio-group {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-.radio-group label {
-    font-size: 14px;
-    font-weight: bold;
-    color: var(--blue-grey);
-}
+
+/* right side styling*/
 .right-section{
     background: var(--dark-blue);
     border-top-right-radius:16px;

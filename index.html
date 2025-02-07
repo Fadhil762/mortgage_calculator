@@ -12,23 +12,25 @@
         <div class="mortgage-calculator">
             <div class="left-section">
                 <div class="heading-area">
-                    <h1>Mortgage Calculator</h1>
+                    <p class="calculator-title">Mortgage Calculator</p>
                     <button type="button" class="clear-btn" id="clear-button">Clear All</button>
                 </div>
                 <form id="mortgage-form">
-                    <div class="form-group">
+                    <div class="form-group-amount">
                         <label for="amount">Mortgage Amount</label>
-                        <input type="number" name="amount" id="amount" placeholder="£" required>
+                        <input type="number" name="amount" class="amount" id="amount" placeholder="£" required>
                     </div>
-                    <div class="form-group">
-                        <label for="term">Mortgage Term</label>
-                        <input type="number" name="term" id="term" placeholder="years" required>
+                    <div class="form-group-term">
+                        <div class="form-group">
+                            <label for="term">Mortgage Term</label>
+                            <input type="number" name="term" id="term" placeholder="years" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="interest">Interest Rate</label>
+                            <input type="number" name="interest" id="interest" placeholder="%" required>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="interest">Interest Rate</label>
-                        <input type="number" name="interest" id="interest" placeholder="%" required>
-                    </div>
-                    <div class="form-group">
+                    <div class="form-group-type">
                         <label for="mortgage-type">Mortgage Type</label>
                         <div class="radio-group">
                             <label for="repayment">
